@@ -1,3 +1,6 @@
+/*Main class for the project
+ * First page of the directory
+		*/
 package cinemaProject;
 
 import javafx.application.Application;
