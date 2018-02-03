@@ -1,5 +1,4 @@
 /*Main class for the project
- * First page of the directory
 		*/
 package cinemaProject;
 
