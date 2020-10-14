@@ -48,7 +48,7 @@ public class TicketingMaintenance {
 
 		Scene scene = new Scene(seatPane); 
 		primaryStage.setScene(scene);
-		Image image = new Image("image/wallpaper.jpeg");
+		Image image = new Image(getClass().getResourceAsStream("image/wallpaper.jpeg"));
 		// new BackgroundSize(width, height, widthAsPercentage, heightAsPercentage, contain, cover)
 		BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, false);
 		// new BackgroundImage(image, repeatX, repeatY, position, size)
