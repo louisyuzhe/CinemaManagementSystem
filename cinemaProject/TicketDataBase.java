@@ -90,7 +90,7 @@ public class TicketDataBase {
 
 				if(num < 1)
 					success = false;
-			} catch (com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException ex1){
+			} catch (java.sql.SQLIntegrityConstraintViolationException ex1){
 				success = false;
 			}
 		}catch (Exception ex2){
