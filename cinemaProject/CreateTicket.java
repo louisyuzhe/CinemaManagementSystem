@@ -106,7 +106,7 @@ public class CreateTicket {
 			Label lb_rating = new Label("Rating :\t"+movieList.getRating());
 
 			//Display movie poster
-			Image img = new Image(movieList.getPoster()+"");
+			Image img = new Image(getClass().getResourceAsStream(movieList.getPoster()+""));
 			ImageView poster = new ImageView(img);
 			poster.setFitWidth(230);
 			poster.setFitHeight(320);
@@ -149,6 +149,7 @@ public class CreateTicket {
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+				System.out.println(e1);
 			}
 
 		}
