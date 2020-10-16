@@ -24,10 +24,10 @@ public class MainMenu extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		FlowPane seatPane = new FlowPane(Orientation.VERTICAL);
 
-		Button session = new Button("Session Maintenance"); 
-		Button movie = new Button("Movie Maintenance "); 
-		Button seat = new Button("Seating Maintenance"); 
-		Button ticket = new Button("Ticketing Maintenance"); 
+		Button session = new Button("Session Maintenance");
+		Button movie = new Button("Movie Maintenance ");
+		Button seat = new Button("Seating Maintenance");
+		Button ticket = new Button("Ticketing Maintenance");
 
 		Font font1 = Font.font("Arial", FontWeight.BOLD, 17);
 		session.setFont(font1);
@@ -35,17 +35,17 @@ public class MainMenu extends Application {
 		seat.setFont(font1);
 		ticket.setFont(font1);
 
-		session.setOnAction(event-> SessionMenu());
-		movie.setOnAction(event-> MovieMenu());
-		seat.setOnAction(event-> SeatingMaintenance());
-		ticket.setOnAction(event-> TicketingMaintenance());
+		session.setOnAction(event-> SessionMenu(primaryStage));
+		movie.setOnAction(event-> MovieMenu(primaryStage));
+		seat.setOnAction(event-> SeatingMaintenance(primaryStage));
+		ticket.setOnAction(event-> TicketingMaintenance(primaryStage));
 
 		session.setMaxWidth(Double.MAX_VALUE);
 		movie.setMaxWidth(Double.MAX_VALUE);
 		seat.setMaxWidth(Double.MAX_VALUE);
 		ticket.setMaxWidth(Double.MAX_VALUE);
 
-		Scene scene = new Scene(seatPane); 
+		Scene scene = new Scene(seatPane);
 		primaryStage.setScene(scene);
 
 		Image image = new Image(getClass().getResourceAsStream("image/wallpaper.jpeg"));
@@ -57,31 +57,35 @@ public class MainMenu extends Application {
 		Background background = new Background(backgroundImage);
 		seatPane.setBackground(background);
 		seatPane.setAlignment(Pos.CENTER);
-		seatPane.setVgap(20); 
-		seatPane.getChildren().addAll(session, movie, seat, ticket); 
+		seatPane.setVgap(20);
+		seatPane.getChildren().addAll(session, movie, seat, ticket);
 
 		primaryStage.setTitle("Main Menu(Admin)");
 		primaryStage.setWidth(900);
 		primaryStage.setHeight(700);
 		primaryStage.setResizable(false);
-		primaryStage.show(); 		
-	}
-	
-
-	private void TicketingMaintenance() {
-		new TicketingMaintenance(); 
+		primaryStage.show();
 	}
 
-	private void SeatingMaintenance() {
-		new SeatingMaintenance();
+
+	private void TicketingMaintenance(Stage primaryStage) {
+		new TicketingMaintenance(primaryStage);
+		primaryStage.close();
 	}
 
-	private void MovieMenu() {
-		new MovieMenu();
+	private void SeatingMaintenance(Stage primaryStage) {
+		new SeatingMaintenance(primaryStage);
+		primaryStage.close();
 	}
 
-	private void SessionMenu() {
-		new SessionMenu();
+	private void MovieMenu(Stage primaryStage) {
+		new MovieMenu(primaryStage);
+		primaryStage.close();
+	}
+
+	private void SessionMenu(Stage primaryStage) {
+		new SessionMenu(primaryStage);
+		primaryStage.close();
 	}
 
 	public static void main(String[] args) {
