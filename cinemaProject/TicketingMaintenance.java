@@ -17,29 +17,35 @@ import javafx.stage.Stage;
 
 public class TicketingMaintenance {
 
-	TicketingMaintenance() {
+	TicketingMaintenance(Stage mainStage) {
 		Stage primaryStage = new Stage();
 		FlowPane seatPane = new FlowPane(Orientation.VERTICAL);
 
 		Button create = new Button("Create New Ticket"); 
 		Button retrieve = new Button("View Ticket Status"); 
 		Button update = new Button("Update Any Ticket"); 
-		Button delete = new Button("Delete Any Ticket"); 
+		Button delete = new Button("Delete Any Ticket");
+		Button btBack = new Button("Back to Main Menu");
 
 		Font font1 = Font.font("Arial", FontWeight.BOLD, 17);
 		create.setFont(font1);
 		retrieve.setFont(font1);
 		update.setFont(font1);
 		delete.setFont(font1);
+		btBack.setFont(font1);
 
 		create.setOnAction(event-> CreateTicket());
 		retrieve.setOnAction(event-> RetrieveTicket());
 		update.setOnAction(event-> UpdateTicket());
 		delete.setOnAction(event-> DeleteTicket());
+		btBack.setOnAction(e->{
+			mainStage.show();
+			primaryStage.close();
+		});
 
 		seatPane.setAlignment(Pos.CENTER);
 		seatPane.setVgap(20); 
-		seatPane.getChildren().addAll(create, retrieve, update, delete); 
+		seatPane.getChildren().addAll(create, retrieve, update, delete, btBack);
 
 		create.setMaxWidth(Double.MAX_VALUE);
 		retrieve.setMaxWidth(Double.MAX_VALUE);

@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 public class SessionMenu {
 
-	SessionMenu() {
+	SessionMenu(Stage primaryStage) {
 		Stage stage = new Stage();
 		stage.setTitle("Session Maintenanc(Admin)"); 
 		GridPane gridPane = new GridPane();
@@ -36,17 +36,20 @@ public class SessionMenu {
 		Button btRetrieveS = new Button("Retrive exsiting Sessions");
 		Button btUpdateS = new Button("Update a new Session");
 		Button btDeleteS = new Button("Delete an existing Time Session");
+		Button btBack = new Button("Back to Main Menu");
 
 		Font font1 = Font.font("Arial", FontWeight.BOLD, 17);
 		btCreateS.setFont(font1);
 		btRetrieveS.setFont(font1);
 		btUpdateS.setFont(font1);
 		btDeleteS.setFont(font1);
+		btBack.setFont(font1);
 
 		gridPane.add(btCreateS,0,0);       
 		gridPane.add(btRetrieveS ,0,1);
 		gridPane.add(btUpdateS ,0,2);
 		gridPane.add(btDeleteS ,0,3);
+		gridPane.add(btBack ,0,4);
 
 		btCreateS.setOnAction(e->{
 			new CreateSession();
@@ -62,6 +65,11 @@ public class SessionMenu {
 
 		btDeleteS.setOnAction(e->{
 			new DeleteSession();		
+		});
+
+		btBack.setOnAction(e->{
+			primaryStage.show();
+			stage.close();
 		});
 
 		Scene scene = new Scene(gridPane);

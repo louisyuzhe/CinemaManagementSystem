@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 public class SeatingMaintenance {
 
-	SeatingMaintenance() {
+	SeatingMaintenance(Stage mainStage) {
 		Stage primaryStage = new Stage();
 		FlowPane seatPane = new FlowPane(Orientation.VERTICAL);
 
@@ -25,7 +25,8 @@ public class SeatingMaintenance {
 		Button retrieve = new Button("View Seats' status"); 
 		Button update = new Button("Update Any Seat"); 
 		Button delete = new Button("Delete Any Seat"); 
-		Button restore_def = new Button("Restore Default Seat"); 
+		Button restore_def = new Button("Restore Default Seat");
+		Button btBack = new Button("Back to Main Menu");
 
 		Font font1 = Font.font("Arial", FontWeight.BOLD, 17);
 		create.setFont(font1);
@@ -33,16 +34,21 @@ public class SeatingMaintenance {
 		update.setFont(font1);
 		delete.setFont(font1);
 		restore_def.setFont(font1);
+		btBack.setFont(font1);
 
 		create.setOnAction(event-> CreateSeat());
 		retrieve.setOnAction(event-> RetrieveSeat());
 		update.setOnAction(event-> UpdateSeat());
 		delete.setOnAction(event-> DeleteSeat());
 		restore_def.setOnAction(event-> RestoreSeat());
+		btBack.setOnAction(e->{
+			mainStage.show();
+			primaryStage.close();
+		});
 
 		seatPane.setAlignment(Pos.CENTER);
 		seatPane.setVgap(20); 
-		seatPane.getChildren().addAll(create, retrieve, update, delete, restore_def); 
+		seatPane.getChildren().addAll(create, retrieve, update, delete, restore_def, btBack);
 
 		create.setMaxWidth(Double.MAX_VALUE);
 		retrieve.setMaxWidth(Double.MAX_VALUE);

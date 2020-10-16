@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 public class MovieMenu {
 	public static int movieCount = 0;
 
-	MovieMenu() {
+	MovieMenu(Stage primaryStage) {
 		Stage stage = new Stage();
 		stage.setTitle("Movie Maintenance (Admin)"); 
 		GridPane gridPane = new GridPane();
@@ -34,20 +34,23 @@ public class MovieMenu {
 		Button btStart = new Button("Start");
 		btStart.setFont(Font.font("Comic Sans",FontWeight.BOLD, FontPosture.ITALIC,20));
 		Button btCreate = new Button("Create a new Movie");
-		Button btRetrieve = new Button("Retrive an exsiting Movie");
+		Button btRetrieve = new Button("Retrieve an existing Movie");
 		Button btUpdate = new Button("Update a new Movie");
 		Button btDelete = new Button("Delete a existing Movie");
+		Button btBack = new Button("Back to Main Menu");
 
 		Font font = Font.font("Arial", FontWeight.BOLD, 17);
 		btCreate.setFont(font);
 		btRetrieve.setFont(font);
 		btUpdate.setFont(font);
 		btDelete.setFont(font);
+		btBack.setFont(font);
 
 		gridPane.add(btCreate,0,0);       
 		gridPane.add(btRetrieve ,0,1);
 		gridPane.add(btUpdate ,0,2);
 		gridPane.add(btDelete ,0,3);
+		gridPane.add(btBack ,0,4);
 
 		btCreate.setOnAction(e->{
 			new CreateMovie();
@@ -63,6 +66,11 @@ public class MovieMenu {
 
 		btDelete.setOnAction(e->{
 			new DeleteMovie();		
+		});
+
+		btBack.setOnAction(e->{
+			primaryStage.show();
+			stage.close();
 		});
 
 		Scene scene = new Scene(gridPane);
