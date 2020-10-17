@@ -61,7 +61,7 @@ public class RetrieveSeat{
 
 		Scene scene = new Scene(vbox);
 		stage.setScene(scene);
-		stage.setTitle("Update Seat");
+		stage.setTitle("View Seat");
 		stage.setResizable(false);
 		stage.show();		
 	}
