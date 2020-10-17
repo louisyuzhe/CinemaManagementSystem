@@ -2,8 +2,6 @@
 
 ## Complete theatre system developed using Java, JavaFx (frontend) and mySQL (backend).
 
-[Link to Website](http://simplebot.xtie.net)
-
 [//]: # (Image References)
 
 [image1]: ./README_media/mainMenu.png "Screenshot of main menu"
@@ -19,6 +17,20 @@
 [image11]: ./README_media/retrieveMovie.PNG "Retrieve All Movies Page"
 [image12]: ./README_media/updateMovie.png "Update Movie Page"
 [image13]: ./README_media/deleteMovie.png "Delete Movie Page"
+[image14]: ./README_media/createSeat.png "Create Seating Page"
+[image15]: ./README_media/viewSeat1.PNG "View Seating Page 1"
+[image16]: ./README_media/viewSeat2.PNG "View Seating Page 2"
+[image17]: ./README_media/updateSeat1.png "Update Seating Page 1"
+[image18]: ./README_media/updateSeat2.png "Update Seating Page 2"
+[image19]: ./README_media/updateSeat3.png "Update Seating Page 3"
+[image20]: ./README_media/deleteSeat.png "Delete Seating Page"
+
+[image21]: ./README_media/createTicket1.png "Create Ticket Page 1"
+[image22]: ./README_media/createTicket2.png "Create Ticket Page 2"
+[image23]: ./README_media/createTicket3.png "Create Ticket Page 3"
+[image24]: ./README_media/viewTicket.png "View All Tickets"
+[image25]: ./README_media/updateTicket.png "Update Ticket"
+[image26]: ./README_media/deleteTicket.png "Delete Ticket"
 
 ---
 ## Preview
@@ -44,11 +56,33 @@
 :-------------------------:|:-------------------------:
 ![alt text][image8]        |  ![alt text][image9]
 
-### 3. Functions of Movie Menu
- Create Movie            |   Retrieve All Movies
+### 4. Functions of Movie Menu
+ Create Movie              |   Retrieve All Movies
 :-------------------------:|:-------------------------:
-![alt text][image10]        |  ![alt text][image11]
+![alt text][image10]       |  ![alt text][image11]
 
- Update Movie            |   Delete Movie
+ Update Movie              |   Delete Movie
 :-------------------------:|:-------------------------:
-![alt text][image12]        |  ![alt text][image13]
+![alt text][image12]       |  ![alt text][image13]
+
+### 5. Functions of Seating Menu
+ Create Seating              |   Delete Seating in Hall
+:-------------------------:|:-------------------------:
+![alt text][image14]       |  ![alt text][image20]
+
+View Seating in Hall Page 1|   View Seating in Hall Page 2
+:-------------------------:|:-------------------------:
+![alt text][image15]        |  ![alt text][image16]
+
+Update Seating in Hall Page 1| Update Seating in Hall Page 2| Update Seating in Hall Page 3
+:-------------------:|:--------------------:|:-------------:
+![alt text][image17] |  ![alt text][image18]|![alt text][image19]
+
+### 6. Functions of Ticketing Menu
+Create Ticket Page 1 | Create Ticket Page 2 | Create Ticket Page 3
+:-------------------:|:--------------------:|:-------------:
+![alt text][image20] |  ![alt text][image21]|![alt text][image22]
+
+View All Tickets      |   Update Ticket      |   Delete Ticket
+:--------------------:|:--------------------:|:--------------------:
+![alt text][image24]  | ![alt text][image25] |  ![alt text][image26]
